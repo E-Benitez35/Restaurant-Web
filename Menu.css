@@ -1,0 +1,98 @@
+@charset "utf-9";
+/*  Author: E35
+    Date:  5/13/2025              
+     
+    Filename: menu.css*/
+
+body 
+{
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+header
+{
+    font: optional 20px;
+    background-size: 100%;
+    background-image: url("Images/Background.jpg");
+    background-position: center;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(156, 180, 185);
+    text-align: center;
+    padding: 40px 10px;
+}
+
+nav
+{
+    font-size: 30px;
+    background-color: beige;
+    background-position: #333;
+    padding: 20px 10px;
+    text-align: center;
+    word-spacing: 60px;
+}
+a
+{
+    word-spacing: 5px;
+}
+/*Main section edit*/
+section#main
+{
+    width: 100%;
+    height: 100%;
+    background-image: url("Images/Background.jpg");
+    background-size: 190%;
+    background-position: center;
+}
+section#main h1
+{
+    text-align: center;
+    font-size: 50px;
+    background-color: purple;
+    color: white;
+}
+/*Menu section edit*/
+section#menu
+{
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    width: 100%;
+    height: 50%;
+}
+section#menu div
+{
+    -webkit-flex: 1 0 160px;
+    flex: 1 0 160px;
+    border: 10px solid rgb(49, 12, 40);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    margin: 70px;
+    height: 400px;
+    background-color: purple;
+}
+section#menu div h2
+{
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 0.1em;
+    background-color: beige;
+}
+section#menu div p
+{
+    text-align: center;
+    font-size: 0.85em;
+    margin: 5px;
+    color: white;
+}
+section#menu div img
+{
+    display: block;
+    width: 100%;
+    margin: 5px auto;
+    height: 60%;
+}

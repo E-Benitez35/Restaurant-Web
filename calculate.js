@@ -1,0 +1,85 @@
+"use strict"
+
+/*  Author: E35
+     Date:  5/13/2025              
+     
+     Filename: calculate.js*/
+
+/*Hold menu items for display and calculations for total*/
+var TsItem = [
+
+    {
+    "Image" : "Images/Enchilada.jpg",
+    "IteName" : "Enchiladas",
+    "Price" : "10.99"
+    },
+
+    {
+    "Image" : "Images/Ribs.jpg",
+    "IteName" : "Ribs",
+    "Price" : "8.99"
+    },    
+    
+    {
+    "Image" : "Images/Steak.jpg",
+    "IteName" : "Steak",
+    "Price" : "11.99"
+    },
+
+    {
+    "Image" : "Images/Pasta.jpg",
+    "IteName" : "Pasta",
+    "Price" : "10.99"
+    },
+
+    {
+    "Image" : "Images/Spaghetti.jpg",
+    "IteName" : "Spaghetti",
+    "Price" : "9.99"
+    }
+            
+];
+
+/*Variable will hold data for menu table in menu html*/
+const PopulateTable = document.getElementById("orderTable");
+
+
+/*Loop will insert data from array to menu*/
+TsItem.forEach((Item, index) =>
+{
+    /*Creates tr to write in menu hmtl table*/
+    var row = document.createElement("tr");
+
+
+    /*Writes following data into table from array*/
+    row.innerHTML = `<th><img src= "${Item.Image}" alt = "photo of ${Item.IteName}"></th>
+    <th> ${Item.IteName}</th>
+    <th> $${Item.Price}</th>
+    <th><input type = "number" min = "0" name = "qty${index}" id = "qty${index}" </input></th>`;
+    
+
+    /*Will append data to variable that holds html table*/
+    PopulateTable.appendChild(row);
+}
+)
+
+/*Will get qty selected from the form and calculate by the price and tax rate to get total for order*/
+function calculate()
+{
+    /*Total will be 0 by default until item is selected*/
+    let total = 0;
+    /*Tax rate*/
+    const taxRate = 0.0825;
+
+    /*Will get info from Tsitem array like price and calculate by the quatity from form to get subtotal*/
+   TsItem.forEach((item, index) =>
+    {
+        const qty = parseInt(document.getElementById(`qty${index}`).value) || 0;
+        total += qty * item.Price;
+    });
+
+    /*Will get subtotal and multiply by tax rate to get total*/
+    total += total * taxRate;
+    /*Will display total to the user with window pop up alert message*/
+    alert(`Your total (after taxes) is: $${total.toFixed(2)}`);
+}

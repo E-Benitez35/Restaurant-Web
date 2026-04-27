@@ -1,0 +1,50 @@
+<!-- 
+    E-Labs restaurant
+    Author: E35
+    Date:  5/13/2025              
+     
+    Filename: todayspecials.html    -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-11"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Order Here</title>
+    <link href="Today'sSpecials.css" rel="stylesheet" >
+    <script src="calculate.js" async></script>
+</head>  
+
+<body>
+
+    <header>
+        <h1>Order Here</h1> 
+    </header>
+    
+
+    <main>
+        <nav>
+        <a href="index.html">Home</a>
+        <a href="menu.html">Menu</a>
+        <a href="todayspecials.html">Order Here</a>
+        <a href="specials.html" target="_blank">Specials</a>
+    </nav>
+    <h2 id="Order"> Order-Here</h2>
+        <form id = "orderForm">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Picture</th>
+                        <th>Dish</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                    </tr>
+                </thead>
+                <tbody id = "orderTable">
+                </tbody>
+            </table>
+            <button type="button" onclick="calculate()">Calculate Total</button>
+        </form>
+    </main>
+    
+</body>
+</html>
